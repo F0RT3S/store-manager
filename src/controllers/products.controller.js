@@ -7,7 +7,7 @@ const listAll = async (_req, res) => {
 
 const listById = async (req, res) => {
   const { id } = req.params;
-  if (typeof id !== 'string') return res.status(400).json({ message: 'id não é uma string' });
+  // if (typeof id !== 'string') return res.status(400).json({ message: 'id não é uma string' });
   const result = await productService.listById(id);
   if (!result) return res.status(404).json({ message: 'Product not found' });
   if (result) return res.status(200).json(result);
