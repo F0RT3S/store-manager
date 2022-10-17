@@ -18,16 +18,16 @@
     "colId": "history",
     "containerId": "",
     "name": "http://localhost:3000/products",
-    "url": "http://localhost:3000/products",
+    "url": "http://localhost:3000/sales",
     "method": "POST",
     "sortNum": 0,
     "created": "2022-10-12T15:31:31.422Z",
-    "modified": "2022-10-13T17:42:20.370Z",
+    "modified": "2022-10-13T21:26:00.300Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"name\": \"Celular\"\n}",
+      "raw": "{\n  \"productId\": 1,\n  \"quantity\": 5\n}",
       "form": []
     },
     "tests": []
