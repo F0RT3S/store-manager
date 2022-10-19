@@ -20,6 +20,7 @@ describe('Testes unitários da camada Services', () => {
     });
 
     it('Verifica se é retornado o array completo ao chamar a função e executá-la', async () => {
+      sinon.stub(connection, 'execute').resolves([productMock])
       const response = await productService.listAll();
       expect(response).to.deep.equal(productMock)
     });

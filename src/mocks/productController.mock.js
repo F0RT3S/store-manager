@@ -20,7 +20,25 @@ const firstProduct = [
   },
 ];
 
+const newProduct = {
+  id: 13,
+  name: 'LULA LÁ, TRAZ A ESPERANÇA',
+};
+
+const updatedProduct = {
+  id: 3,
+  name: 'Taco de basquete',
+};
+
+const deleteProduct = {
+  id: 1,
+  name: 'Martelo de Thor',
+};
+
 module.exports = {
   allProducts,
   firstProduct,
+  newProduct,
+  updatedProduct,
+  deleteProduct,
 };
