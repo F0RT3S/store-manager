@@ -5,6 +5,7 @@ const connection = require('../../../src/models/db/connection');
 const productMock = require('../../../src/mocks/product.mock');
 const productModel = require('../../../src/models/products.model');
 const { execute } = require('../../../src/models/db/connection');
+const { newProduct } = require('../../../src/mocks/productController.mock')
 
 describe('Testes unitários da camada Model', () => {
 
@@ -26,6 +27,12 @@ describe('Testes unitários da camada Model', () => {
       expect(response).to.deep.equal(productMock)
     });
 
+    it('Verifica se é deletado um produto', async () => {
+      sinon.stub(connection, 'execute').resolves([]);
+      const result = await productModel.deleteProducts(1);
+      expect(result).to.be.deep.equal([]);
+    });
+    
   });
   afterEach(sinon.restore);
 });
